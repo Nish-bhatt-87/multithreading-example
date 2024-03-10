@@ -14,6 +14,8 @@ class Process {
         synchronized(this) {
             System.out.println("consume method is executed");
             notify();
+            Thread.sleep(5000);
+            System.out.println("not handling the lock immediately");
         }
     }
 
